@@ -9,11 +9,11 @@
 
 
 def find_words_with_letter(words, letter):
-    result = [word for word in words if word.count(letter) >= 2]
+    result = [word for word in words if word.count(letter) >= 3]
     return result if result else "No words found"
 
 # Пример использования
-words = ["banana", "apple", "cherry", "grape"]
-letter = "a"
+words = ["banana", "apple", "cherry", "grape","pineapple"]
+letter = "p"
 
 print(find_words_with_letter(words, letter))
