@@ -14,7 +14,7 @@
 
 # # Пример использования
 # words = ["banana", "apple", "cherry", "grape","pineapple"]
-# letter = "p"s
+# letter = "p"
 
 # print(find_words_with_letter(words, letter))
 # i = 1 
@@ -35,6 +35,8 @@
 #         print(f"{x} x {y} ={x*y}")
 #     print()
 
+
+# Пирамида
 # x = 5
 # y = 1
 # for i in range(1, 11):
@@ -42,7 +44,40 @@
 #         print(f"{x} x {y} ={x*y}")
 #     print()
     
-for i in range (1, 11):
-    # for j in range(1, i + 1):
-     print(" " .join(str(j) for j in range(1, i + 1)) )
-     
+# for i in range (1, 11):
+#     # for j in range(1, i + 1):
+#      print(" " .join(str(j) for j in range(1, i + 1)) )
+# x = 1
+# # while x < 11:
+#     print(x)
+#     x += 1
+
+
+# def remove_duplicates(lst):
+#     seen = set()
+#     result = []
+    
+#     for num in lst:
+#         if num not in seen:
+#             seen.add(num)
+#             result.append(num)
+    
+#     return result
+
+# lst = [1, 2, 2, 3, 4, 6, 4, 11, 333, 45, 5]
+# print(remove_duplicates(lst))
+
+
+# def capitalize_alternate_words(sentence):
+#     words = sentence.split()
+    
+#     if len(words) < 2:
+#         return "Too short to modify"
+    
+#     for i in range(0, len(words), 2):  
+#         words[i] = words[i].capitalize()  
+    
+#     return " ".join(words)  
+
+# sentence = "Я в университете"
+# print(capitalize_alternate_words(sentence))

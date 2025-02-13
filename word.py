@@ -13,16 +13,33 @@
 # print(capitalize_alternate_words(sentence))
 
 
-def remove_duplicates(lst):
-    seen = set()
-    result = []
-    
-    for num in lst:
-        if num not in seen:
-            seen.add(num)
-            result.append(num)
-    
-    return result
 
-lst = [1, 2, 2, 3, 4, 6, 4, 11, 333, 45, 5]
-print(remove_duplicates(lst))
+#   не четные
+# x = 1         
+# while x < 100:
+#     if x % 2 != 0:
+#         print(x)
+#     # x += 1
+#     x = x + 1
+
+
+# number = [12, 7, 34, 23, 45, 66, 89, 90, 41, 55]
+# even_numbers = []
+# odd_number = []
+
+# for x in number:
+#     even_numbers.append(x)
+# else:
+#     odd_number.append(x)
+
+# print(f"Четные числа: {even_numbers}")
+# print(f"Нчетные числа: {odd_number}")
+
+number = [22, 45, 67, 12, 89, 34, 55, 90, 10]
+top_number = [1]
+no_number =[0]
+
+for x in number:
+    if x> max[1]
+     
+print(f"большой
