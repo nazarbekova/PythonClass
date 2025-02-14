@@ -35,11 +35,7 @@
 # print(f"Четные числа: {even_numbers}")
 # print(f"Нчетные числа: {odd_number}")
 
-number = [22, 45, 67, 12, 89, 34, 55, 90, 10]
-top_number = [1]
-no_number =[0]
 
-for x in number:
-    if x> max[1]
-     
-print(f"большой
+
+
+

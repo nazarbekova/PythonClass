@@ -81,3 +81,35 @@
 
 # sentence = "Я в университете"
 # print(capitalize_alternate_words(sentence))
+
+
+# Максимум минимум
+
+# number = [22, 45, 67, 12, 89, 34, 55, 90, 1]
+# top_number = number [0]
+# no_number = number [0]
+# for x in number:
+#     if x > top_number:
+#        top_number = x
+#     if x < no_number:
+#         no_number = x
+     
+# print(f"максимум: {top_number}")
+# print(f"минимум: {no_number}")
+
+
+# Подчет гласных и согласных
+
+
+word =input ("Введите слово")
+vowels = "aeiou"
+vow_count = 0
+con_count = 0
+for letter in word.lower():
+        if letter in vowels:
+            vow_count += 1
+        elif letter.isalpha():
+            con_count += 1
+
+print(f"Гласные:, {vow_count}")
+print(f"Согласные:, {con_count}")
