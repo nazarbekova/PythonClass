@@ -36,6 +36,32 @@
 # print(f"Нчетные числа: {odd_number}")
 
 
+оценка = input("список оценок : ").split()
+
+оценка = [int(grade) for grade in оценка]
+
+even_count = 0
+odd_count = 0
+
+for score in оценк:
+   
+    if score >= 90:
+        letter_grade = 'A'
+        result = 'Сдал'
+    elif score >= 80:
+        letter_grade = 'B'
+        result = 'Сдал'
+    elif score >= 70:
+        letter_grade = 'C'
+        result = 'Сдал'
+    elif score >= 60:
+        letter_grade = 'D'
+        result = 'Сдал'
+    else:
+        letter_grade = 'F'
+        result = 'Не сдал'
+
+    print(f"Балл: {score} → Оценка: {letter_grade} ({result})")
 
 
 
