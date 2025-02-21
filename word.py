@@ -70,11 +70,11 @@ students = [
  {
 "name": "Alice",
   "subjects": ("Math", "Physics", "English"), 
-  "scores": {"Math": 85, "Physics": 78, "English": 92}},
+  "scores": {"Math": 15, "Physics": 78, "English": 92}},
  {
 "name": "Bob",
   "subjects": ("Math", "Biology", "English"), 
-  "scores": {"Math": 72,"Biology": 88, "English": 80}},
+  "scores": {"Math": 72,"Biology": 45, "English": 80}},
  {
 "name": "Charlie",
   "subjects": ("Math", "Physics", "Chemistry"), 
@@ -94,7 +94,40 @@ def get_average_score(name, students):
     for student in students:
         if student["name"] == name:
             scores = student["scores"].values()
-            return sum(scores) / len(scores) if scores else 0
-    return None
+            return sum(scores) / len(scores)
         
-print(get_average_score("Bob", students))
+# print(get_average_score("Bob", students))
+
+
+def  find_top_student(students):
+
+    top_score = 0
+    top_student = []
+    for student in students:
+      avg_score = sum(student["scores"].values()/len(student["scores"]))
+
+      if avg_score > top_score:
+         top_score = avg_score
+         top_student = student["name"]
+         return top_student
+      
+# print(find_top_student(students))
+          
+def failed_students(students, passing_score=50):
+  failed = []
+
+  for student in students:
+      if any(score < passing_score for score in student["scores"].values()):
+          failed.append(student["name"])
+
+  return failed
+
+print(failed_students(students))
+
+
+
+
+
+          
+          
+          

@@ -51,39 +51,8 @@
 # }
 # print(thisdict)
 
-students = [
+
  
- {
-"name": "Alice",
-  "subjects": ("Math", "Physics", "English"), 
-  "scores": {"Math": 85, "Physics": 78, "English": 92}},
- {
-"name": "Bob",
-  "subjects": ("Math", "Biology", "English"), 
-  "scores": {"Math": 72,"Biology": 88, "English": 80}},
- {
-"name": "Charlie",
-  "subjects": ("Math", "Physics", "Chemistry"), 
-  "scores": {"Math": 90, "Physics": 95, "Chemistry": 85}},
-]
-
-def display_students(data):
-    for student in data:
-        name = student["name"]
-        subject = ", ".join(student["subject"])
-        print(f"{name} is enrolled in: {subject }")
 
 
-# display_students(students)
 
-def get_average_score(name, students):
-    for student in students:
-        if student["name"] == name:
-            scores = student["scores"].values()
-            return sum(scores) / len(scores) if scores else 0
-    return None
-        
-# print(get_average_score("Bob", students))
-
-
-def  find_top_student(students)

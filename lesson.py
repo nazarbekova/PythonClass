@@ -101,15 +101,15 @@
 # Подчет гласных и согласных
 
 
-word =input ("Введите слово")
-vowels = "aeiou"
-vow_count = 0
-con_count = 0
-for letter in word.lower():
-        if letter in vowels:
-            vow_count += 1
-        elif letter.isalpha():
-            con_count += 1
+# word =input ("Введите слово")
+# vowels = "aeiou"
+# vow_count = 0
+# con_count = 0
+# for letter in word.lower():
+#         if letter in vowels:
+#             vow_count += 1
+#         elif letter.isalpha():
+#             con_count += 1
 
-print(f"Гласные:, {vow_count}")
-print(f"Согласные:, {con_count}")
+# print(f"Гласные:, {vow_count}")
+# print(f"Согласные:, {con_count}")
