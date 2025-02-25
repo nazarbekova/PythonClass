@@ -52,7 +52,48 @@
 # print(thisdict)
 
 
+
+
+# class Character:
+#     def __init__(self, health, damage, speed):
+#         self.health = health
+#         self.damage = damage
+#         self. speed = speed
+
+
+#     def double_speed(self):
+#         self.speed *= 2
+
+
+# warrior = Character(100, 50, 20)
+# ninja = Character(70, 30, 40)
+       
  
+# print(warrior.speed)
+# print(ninja.speed)
+
+# warrior.double_speed()
+
+# print(f" Warrior New Speed {warrior.speed}")
 
 
+class Employees:
+    def __init__(self, name, last, salary):
+        self.name = name
+        self.last = last
+        self.salary = salary
+        self.email = name + "."+ last + "aman@gmail.com"
 
+    def bonus(self):
+        self.salary + 10000
+
+emp1 = Employees("Aman", "Esen", 2000)
+
+emp1.first = "Aman"
+emp1.last = "Aman"
+emp1.email = "aman@gmail.com"
+
+print(emp1.salary)
+emp1.bonus()
+print(emp1.salary)
+        
