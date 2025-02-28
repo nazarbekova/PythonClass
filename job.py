@@ -77,23 +77,71 @@
 # print(f" Warrior New Speed {warrior.speed}")
 
 
-class Employees:
-    def __init__(self, name, last, salary):
-        self.name = name
-        self.last = last
-        self.salary = salary
-        self.email = name + "."+ last + "aman@gmail.com"
+# class Employees:
+#     def __init__(self, name, last, salary):
+#         self.name = name
+#         self.last = last
+#         self.salary = salary
+#         self.email = name + "."+ last + "aman@gmail.com"
 
-    def bonus(self):
-        self.salary + 10000
+#     def bonus(self):
+#         self.salary + 10000
 
-emp1 = Employees("Aman", "Esen", 2000)
+# emp1 = Employees("Aman", "Esen", 2000)
 
-emp1.first = "Aman"
-emp1.last = "Aman"
-emp1.email = "aman@gmail.com"
+# emp1.first = "Aman"
+# emp1.last = "Aman"
+# emp1.email = "aman@gmail.com"
 
-print(emp1.salary)
-emp1.bonus()
-print(emp1.salary)
+# print(emp1.salary)
+# emp1.bonus()
+# print(emp1.salary)
         
+
+library_books = {
+    "B001": {"title": "Основы Python", "borrower": "Алиса", "due_date": -5, "fine_rate": 0.50},
+    "B002": {"title": "Наука о данных", "borrower": "Боб", "due_date": 3, "fine_rate": 0.75},
+    "B003": {"title": "Введение в ИИ", "borrower": None, "due_date": 0, "fine_rate": 0.25},
+    "B004": {"title": "Алгоритмы", "borrower": "Алиса", "due_date": 2, "fine_rate": 1.00}
+}
+
+def calculate_fine(book):
+    overdue_days = book['due_date']
+    return max(0, -overdue_days) * book['fine_rate']
+
+def get_book_status(book):
+    if book['borrower'] is None:
+        return "Доступна"
+    elif book['due_date'] >= 0:
+        return "В срок"
+    else:
+        return "Просрочена"
+
+def get_highest_fine_borrower(library):
+    fines_by_borrower = {}
+    
+    for book in library.values():
+        borrower = book['borrower']
+        fine = calculate_fine(book)
+        if borrower not in fines_by_borrower:
+            fines_by_borrower[borrower] = 0
+        fines_by_borrower[borrower] += fine
+
+    highest_fine_borrower = max(fines_by_borrower, key=fines_by_borrower.get)
+    return highest_fine_borrower, fines_by_borrower[highest_fine_borrower]
+
+def generate_report(library):
+    total_fine = 0 
+    
+    for book_id, book in library.items():
+        fine = calculate_fine(book)
+        total_fine += fine
+        status = get_book_status(book)
+        print(f"Книга: {book['title']}, Статус: {status}, Штраф: ${fine:.2f}")
+    
+    borrower, total_borrower_fine = get_highest_fine_borrower(library)
+    print(f"\nЗаемщик с наибольшими штрафами: {borrower} (${total_borrower_fine:.2f})")
+
+    print(f"\nОбщий штраф за просроченные книги: ${total_fine:.2f}")
+
+generate_report(library_books)
